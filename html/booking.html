@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Booking Portal</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="booking-container">
+        <h2 id="destinationTitle">Booking Details</h2>
+        <p>Select payment method:</p>
+        <ul>
+            <li><a href="https://www.paypal.com">Pay with PayPal</a></li>
+            <li><a href="#">Pay with Visa</a></li>
+        </ul>
+    </div>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const destination = params.get("destination");
+        document.getElementById("destinationTitle").textContent = `Book your trip to ${destination}`;
+    </script>
+</body>
+</html>

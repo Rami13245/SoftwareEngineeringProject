@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TripTastic</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel = "stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="profile-icon">
+        <a href="login.html" title="Login / Sign Up">
+          <i class="fas fa-user-circle"></i>
+          <span>View Profile</span>
+        </a>
+      </div>
+    <br><br><br><br><br><br>
+    <nav>
+        <ul>
+            <li><a href="homepage.html">  Home</a></li>
+            <li><a href="explore.html">Explore</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Support</a></li>  
+            <li><a href="FAQs.html">FAQs</a></li>
+            <!--This is the navigation bar in the form of an unordered list where the elements link to other components of the project-->
+        </ul>
+    </nav>
+    <section class="recommendation-section">
+        <form id="recommendationForm" class="recommendation-form">
+          <label for="interests">Interests:</label><br>
+          <div class="interests-group">
+            <input type="checkbox" name="interest" value="nature"> Nature <br>
+            <input type="checkbox" name="interest" value="food"> Food <br>
+            <input type="checkbox" name="interest" value="adventure"> Adventure <br>
+            <input type="checkbox" name="interest" value="history"> History <br>
+            <input type="checkbox" name="interest" value="nightlife"> Nightlife <br>
+            <input type="checkbox" name="interest" value="shopping"> Shopping <br>
+            <input type="checkbox" name="interest" value="beach"> Beaches <br>
+          </div><br>
+      
+          <label for="budgetInput">Budget:</label><br>
+          <select id="budgetInput" class="recommendation-input" required>
+            <option value="low">Low (Under $1000)</option>
+            <option value="medium">Medium ($1000 - $2000)</option>
+            <option value="high">High ($2000+)</option>
+          </select><br><br>
+      
+          <label for="durationInput">Duration (Days):</label><br>
+          <input type="number" name="duration" id="durationInput" class="recommendation-input" required><br><br>
+      
+          <label for="travelTypeSelect">Travel Type:</label><br>
+          <select name="travelType" id="travelTypeSelect" class="recommendation-input" required>
+            <option value="solo">Solo</option>
+            <option value="couple">Couple</option>
+            <option value="family">Family</option>
+            <option value="group">Group</option>
+          </select><br><br>
+      
+          <input type="submit" value="Get Recommendations" class="recommendation-button">
+        </form>
+      
+        <div id="results" class="recommendation-results"></div>
+      </section>
+      
+      <script src="../script.js"></script>
+</body>
+</html>

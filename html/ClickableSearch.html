@@ -1,0 +1,15 @@
+function searchTrips() {
+    const input = document.getElementById('searchInput').value.toLowerCase();
+    const availableTrips = ['paris', 'new york', 'tokyo', 'dubai', 'istanbul'];
+
+    const results = availableTrips.filter(trip => trip.toLowerCase().includes(input));
+    const resultContainer = document.getElementById('searchResults');
+
+    resultContainer.innerHTML = results.map(
+        trip => `<div class="search-result" onclick="goToBooking('${trip}')">${trip}</div>`
+    ).join('');
+}
+
+function goToBooking(destination) {
+    window.location.href = `booking.html?destination=${destination}`;
+}

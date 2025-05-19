@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Login - TripTastic</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <div class="loginSignUp" style="margin-top: 100px; width: 600px">
+    <h2>Admin Login</h2>
+    <form onsubmit="adminLogin(event)">
+      <input type="email" id="adminEmail" placeholder="Admin Email" required><br><br>
+      <input type="password" id="adminPass" placeholder="Password" required><br><br>
+      <input type="submit" value="Login" class="loginBtn">
+    </form>
+  </div>
+
+  <script>
+    function adminLogin(event) {
+      event.preventDefault();
+      const email = document.getElementById('adminEmail').value;
+      const password = document.getElementById('adminPass').value;
+
+      fetch('http://127.0.0.1:5000/admin-login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password })
+      })
+      .then(res => res.json())
+      .then(data => {
+        alert(data.message);
+        if (data.message === "Admin login successful") {
+          window.location.href = "admin_dashboard.html";
+        }
+      });
+    }
+  </script>
+</body>
+</html>

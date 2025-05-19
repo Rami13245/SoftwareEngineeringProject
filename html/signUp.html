@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="../script.js"></script>
+</head>
+
+<body>
+  
+    <div class="loginSignUp" style="margin-top:150px; width:600px">
+        <h2 id="loginSignText">Sign Up</h2>
+        <form>
+            <input id="nameSign" class="loginSignUpInput"  type="text" placeholder="Name" autocomplete="on" required><br><br>
+            <input id="emailSign" class="loginSignUpInput" type="email" placeholder="Email" autocomplete="on" required><br><br>
+            <input id="ageSign" class="loginSignUpInput"  list="browsers" name="browser" placeholder="Age"><br><br>
+                <datalist id="browsers">
+                    <option value="18-24">
+                    <option value="25-31">
+                    <option value="32-50">
+                    <option value="50+">
+                </datalist>
+            <input id="passSign" class="loginSignUpInput"  type="password" placeholder="Password" minlength="8" maxlength="16" required><br><br>
+            <input class="loginSignUpInput"  type="reset" value="Reset">
+            <!--<button class="btn">Sign Up</button><br><br>-->
+        </form>
+        <input type="submit" value="Sign Up" onclick="validateSignUp(event)"><br><br>
+        <p>-----------------------------------------</p>
+        <p class="bottom-textLoginSign">Already have an account? <a class="signUpLoginLink" href="index.html">Log In</a></p>
+    </div>
+</body>
+</html>

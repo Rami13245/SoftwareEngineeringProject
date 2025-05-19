@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Dashboard - TripTastic</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <h1 style="text-align:center; margin-top:50px;">TripTastic Admin Panel</h1>
+  <div style="width: 90%; margin: 20px auto;">
+    <h2>Registered Users</h2>
+    <table border="1" width="100%" style="background:white; text-align:left;">
+      <thead>
+        <tr><th>Name</th><th>Email</th><th>Age</th><th>Action</th></tr>
+      </thead>
+      <tbody id="userTable"></tbody>
+    </table>
+  </div>
+
+  <script>
+    fetch('http://127.0.0.1:5000/users')
+      .then(res => res.json())
+      .then(data => {
+        const table = document.getElementById('userTable');
+        data.users.forEach(user => {
+          table.innerHTML += `
+            <tr>
+              <td>${user.name}</td>
+              <td>${user.email}</td>
+              <td>${user.age}</td>
+              <td><button onclick="deleteUser('${user.email}')">Delete</button></td>
+            </tr>
+          `;
+        });
+      });
+
+    function deleteUser(email) {
+      fetch(`http://127.0.0.1:5000/delete-user`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email })
+      })
+      .then(res => res.json())
+      .then(data => {
+        alert(data.message);
+        location.reload(); // Refresh the table
+      });
+    }
+  </script>
+</body>
+</html>

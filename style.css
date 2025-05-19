@@ -1,0 +1,342 @@
+body{
+    background-image: url('../images/TripTasticBackGroundImage.png');  
+    background-size: cover;
+    background-position:initial;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color: rgb(206, 204, 164);
+    font-family: 'Poppins', 'Times New Roman', sans-serif;
+    color: black;
+}
+
+
+
+.profile-icon {
+    position: absolute;
+    right: 2rem;
+    top: 5%;
+    transform: translateY(-50%);
+  }
+  .profile-icon a{
+    text-decoration: none;
+  color: black;
+  font-weight: 500;
+  gap: 8px; /* space between icon and text */
+  font-size: 1.1rem;
+  }
+
+  .profile-icon i {
+    font-size: 3rem;
+    color: #2F80ED;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .profile-icon i:hover {
+    color: #FF7F50;
+  }
+
+/*Above we designed the View Profile Button*/
+
+nav  ul{
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+nav ul li {
+    list-style: none;
+    margin: 0 15px;
+    border-right: 2px solid black;
+    padding-left: 16px;
+    padding-right: 16px;
+    border-left: 2px solid black;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0); /* Default color */
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: white;
+    color: purple;
+}
+
+/*Above we designed the navigation bar */
+
+
+.loginSignUp {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
+      width: 400px;
+    text-align: center;
+    margin: 20px;
+}
+
+.loginSignUpInput  {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 5px;
+}
+
+.loginBtn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.loginBtn:hover {
+    background-color: blue;
+}
+
+.bottom-textLoginSign {
+    margin-top: 10px;
+}
+
+.signUpLoginLink {
+    color: #007bff;
+    text-decoration: none;
+}
+
+/*Above we designed the Sign Up and Login pages*/ 
+
+.home-box {
+    background-color: white;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 1.5rem;
+    max-width: 500px;
+    margin: 1rem auto;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .home-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .home-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  }
+
+/*Above we designed the homepage images */
+
+.about-section div {
+    background-color: white;
+    max-width: 1000px;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid gray;
+    border-radius: 5px;
+}
+
+.about-section h1 {
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 10px;  
+    font-size: 65px;
+    color: #333;
+}
+
+.content {
+    font-size: 25px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.team-section {
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.team-member {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    align-items: center;
+    width: 450px;
+    display: flex;
+    transition: 0.3s;
+    gap: 20px;
+}
+
+.team-member:hover {
+    transform: scale(1.03);  
+}
+
+.team-member img {
+    border-radius: 50%;
+    width: 150px;  
+    height: 150px;  
+    object-fit: cover;    
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);  
+    transition: 0.3s;  
+}
+
+.team-member h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+.team-member p {
+    font-size: 16px;
+    color: #555;
+    text-align: left;
+    margin: 5px 0;
+}
+.team-img {
+    width: 150px;  
+    height: 150xp; 
+    object-fit: cover;  
+    border-radius: 50%; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); 
+    transition: 0.3s; 
+}
+
+.team-img:hover {
+    transform: scale(1.1); 
+}
+.team-name {
+    color: grey;  
+    font-weight: bold;  
+    text-align: center;  
+}
+.team-info {  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/*Above we designed the about.html page and gave CSS styling to the team info too where we put our pictures as images*/
+
+
+.recommendation-section {
+    margin-top: 30px;
+  }
+  
+  .recommendation-form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px 30px;
+    border-radius: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .recommendation-form label {
+    font-weight: bold;
+    font-size: 16px;
+    display: block;
+    color: #333;
+    margin-top: 10px;
+  }
+  
+  .interests-group input[type="checkbox"] {
+    margin-right: 6px;
+    margin-left: 8px;
+  }
+  
+  .recommendation-input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 15px;
+    box-sizing: border-box;
+  }
+  
+  .recommendation-button {
+    background-color: rgb(155, 14, 155);
+    color: white;
+    padding: 10px 18px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 auto; /* Center the button */
+    display: block;
+  }
+  
+  .recommendation-button:hover {
+    background-color: rgb(76, 6, 76);
+  }
+  
+  .recommendation-results {
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  
+  #results {
+    display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+  gap: 30px; 
+  }
+  
+  .destination {
+    background-color: white;
+    padding: 30px 50px;
+    border-radius: 20px;
+    width: 400px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #2c3e50;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .destination:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); 
+  }
+
+  .plane-icon {
+    width: 60px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: contain;
+  }
+
+/*Above we designed the recommendations page*/
+
